@@ -1,0 +1,17 @@
+#!/bin/sh
+
+NAME="kapnav"
+NAME_NP="kapnav_nopause"
+
+sed -e 's/\\pause//g' "$NAME.tex" > "$NAME_NP.tex"
+
+pdflatex "$NAME.tex" #1>/dev/null
+pdflatex "$NAME.tex" #1>/dev/null
+
+pdflatex "$NAME_NP.tex" 1>/dev/null
+pdflatex "$NAME_NP.tex" 1>/dev/null
+
+rm *.aux *.log *.nav *.out *.snm *.toc 2>/dev/null
+rm "$NAME_NP.tex" 2>/dev/null
+
+acroread "$NAME.pdf" 2>/dev/null
