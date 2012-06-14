@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+       	<item android:id="@+id/my_location_menu"
+          android:icon="@drawable/ic_menu_goto"
+          android:title="Position"/>
+       	<item android:id="@+id/map_select_menu"
+          android:icon="@drawable/ic_menu_archive"
+          android:title="Select map"/>
+    	<item android:id="@+id/compass_menu"
+          android:icon="@drawable/ic_menu_compass"
+          android:title="Compass"/>
+</menu>
